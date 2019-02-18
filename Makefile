@@ -15,3 +15,7 @@ histogram.png: histogram.tsv
 
 report.html: report.Rmd histogram.tsv histogram.png
 	Rscript -e 'rmarkdown::render("$<")'
+
+.PHONY: all clean
+.DELETE_ON_ERROR:
+.SECONDARY:
